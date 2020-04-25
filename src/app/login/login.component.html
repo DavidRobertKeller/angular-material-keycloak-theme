@@ -1,4 +1,5 @@
-<form #loginFormHTMLElement [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+<form #loginFormHTMLElement [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()"
+id="kc-form-login" name="kc-form-login" method="POST" >
   <mat-card class="login-card">
     <mat-card-header>
       <mat-card-title>Connection</mat-card-title>
@@ -7,7 +8,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Username" formControlName="username" value="username">
+            <input matInput placeholder="Username" formControlName="username" name="username" />
             <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
               Username is <strong>required</strong>
             </mat-error>
@@ -17,7 +18,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="First name" formControlName="password">
+            <input matInput placeholder="Passord" formControlName="password" name="password" type="password" />
             <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
               Password is <strong>required</strong>
             </mat-error>
