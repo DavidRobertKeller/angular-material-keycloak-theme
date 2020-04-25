@@ -25,9 +25,8 @@ export class LoginComponent {
       let actionUrl = (window as { [key: string]: any })["g_urlLoginAction"] as string;
       actionUrl = actionUrl.replace( /&amp;/g, '&');
       htmlFormElement.action = actionUrl;
-      console.log('g_urlLoginAction: ', actionUrl);
-
-      //el.submit();
+      // console.log('g_urlLoginAction: ', actionUrl);
+      htmlFormElement.submit();
     }
   }
 }
