@@ -1,6 +1,7 @@
 {
   "name": "angular-material-keycloak-theme",
   "version": "0.0.0",
+  "kcThemeName" : "mail-theme",
   "bdir": "./dist/angular-material-keycloak-theme/",
   "scripts": {
     "ng": "ng",
@@ -10,14 +11,18 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "echoBdir": "cross-var echo bdir is $npm_package_bdir",
-    "postbuild": "npm run echoBdir && npm run createLoginDir && npm run buildLoginFTLPage && npm run copyRessources",
-    "createLoginDir": "cross-var mkdirp $npm_package_bdir/login/resources",
-    "buildLoginFTLPage": "cross-var cp $npm_package_bdir/index.html $npm_package_bdir/login/login.ftl",
+    "postbuild": "npm run echoBdir && npm run createThemeDirs && npm run buildLoginFTLPage && npm run copyRessources",
+    "createThemeDirs": "npm run createAccountDir && npm run createAdminDir && npm run createLoginDir && npm run createWelcomeDir",
+    "createAccountDir": "cross-var mkdirp $npm_package_bdir/$npm_package_kcThemeName/account",
+    "createAdminDir": "cross-var mkdirp $npm_package_bdir/$npm_package_kcThemeName/admin",
+    "createLoginDir": "cross-var mkdirp $npm_package_bdir/$npm_package_kcThemeName/login/resources",
+    "createWelcomeDir": "cross-var mkdirp $npm_package_bdir/$npm_package_kcThemeName/welcome",
+    "buildLoginFTLPage": "cross-var cp $npm_package_bdir/index.html $npm_package_bdir/$npm_package_kcThemeName/login/login.ftl",
     "copyRessources": "npm run copyRessourcesCss && npm run copyRessourcesJs && npm run copyRessourcesTxt && npm run copyRessourcesIco",
-    "copyRessourcesCss": "cross-var cp $npm_package_bdir/*.css $npm_package_bdir/login/resources",
-    "copyRessourcesJs": "cross-var cp $npm_package_bdir/*.js $npm_package_bdir/login/resources",
-    "copyRessourcesTxt": "cross-var cp $npm_package_bdir/*.txt $npm_package_bdir/login/resources",
-    "copyRessourcesIco": "cross-var cp $npm_package_bdir/*.ico $npm_package_bdir/login/resources"
+    "copyRessourcesCss": "cross-var cp $npm_package_bdir/*.css $npm_package_bdir/$npm_package_kcThemeName/login/resources",
+    "copyRessourcesJs": "cross-var cp $npm_package_bdir/*.js $npm_package_bdir/$npm_package_kcThemeName/login/resources",
+    "copyRessourcesTxt": "cross-var cp $npm_package_bdir/*.txt $npm_package_bdir/$npm_package_kcThemeName/login/resources",
+    "copyRessourcesIco": "cross-var cp $npm_package_bdir/*.ico $npm_package_bdir/$npm_package_kcThemeName/login/resources"
   },
   "private": true,
   "dependencies": {
