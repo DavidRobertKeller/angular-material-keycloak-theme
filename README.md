@@ -47,3 +47,4 @@ Example:
 * https://www.npmjs.com/package/mkdirp
 * https://www.npmjs.com/package/cross-var
 * https://www.npmjs.com/package/copyfiles
+* https://www.npmjs.com/package/replace
