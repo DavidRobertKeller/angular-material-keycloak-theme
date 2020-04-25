@@ -45,3 +45,4 @@ Example:
 * https://github.com/httpsOmkar/carbon-keycloak-theme
 * https://github.com/UKHomeOffice/keycloak-theme-govuk
 * https://www.npmjs.com/package/mkdirp
+* https://www.npmjs.com/package/cross-var
