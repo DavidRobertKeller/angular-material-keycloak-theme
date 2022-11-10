@@ -39,7 +39,7 @@
     "copyfiles": "^2.2.0",
     "cross-var": "^1.1.0",
     "mkdirp": "^1.0.4",
-    "replace": "^1.2.0",
+    "replace": "^1.2.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
