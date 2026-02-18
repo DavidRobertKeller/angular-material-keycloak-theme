@@ -43,11 +43,8 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -66,11 +63,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-material-keycloak-theme:build"
+            "buildTarget": "angular-material-keycloak-theme:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-material-keycloak-theme:build:production"
+              "buildTarget": "angular-material-keycloak-theme:build:production"
             }
           }
         },
@@ -126,5 +123,7 @@
       }
     }
   },
-  "defaultProject": "angular-material-keycloak-theme"
+  "cli": {
+    "defaultCollection": "@schematics/angular"
+  }
 }
